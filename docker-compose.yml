@@ -8,7 +8,7 @@ services:
     volumes:
       - ./workspace:/home/devops/workspace
       - .ssh:/home/devops/.ssh
-      - .ssh/sshd_config:/etc/ssh/ssh_config
+      - .ssh/ssh_config:/etc/ssh/ssh_config
 
     command: ["/bin/bash"]
     stdin_open: true
