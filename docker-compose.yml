@@ -1,0 +1,14 @@
+services:
+  ansible:
+    build: .
+    container_name: ansible_controller
+    environment:
+      - ANSIBLE_HOST_KEY_CHECKING=false
+      - ANSIBLE_PYTHON_INTERPRETER=/usr/bin/python3
+    volumes:
+      - ./workspace:/home/student/workspace
+      - .ssh:/home/student/.ssh
+
+    command: ["/bin/bash"]
+    stdin_open: true
+    tty: true

@@ -1,0 +1,14 @@
+[ubuntu_servers]
+svr01
+svr02
+svr03
+
+[web_servers]
+svr01
+svr02
+
+[load_balancers]
+svr03
+
+
+
