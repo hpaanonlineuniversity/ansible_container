@@ -1,3 +1,11 @@
+
+Docker Container ထဲမှာ Ansible အသုံးပြုခြင်း
+
+./configure.sh
+./run.sh
+
+###########################################################################
+
 Ansible - Host OS နှင့် Docker Container နှိုင်းယှဉ်ခြင်း
 
 
