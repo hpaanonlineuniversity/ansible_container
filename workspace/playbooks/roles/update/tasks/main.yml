@@ -6,3 +6,4 @@
 - name: Upgrade the OS (apt-get dist-upgrade)
   ansible.builtin.apt:
     upgrade: dist
+    force_apt_get: yes
