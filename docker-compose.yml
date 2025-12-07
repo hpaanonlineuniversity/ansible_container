@@ -6,8 +6,8 @@ services:
       - ANSIBLE_HOST_KEY_CHECKING=false
       - ANSIBLE_PYTHON_INTERPRETER=/usr/bin/python3
     volumes:
-      - ./workspace:/home/student/workspace
-      - .ssh:/home/student/.ssh
+      - ./workspace:/home/devops/workspace
+      - .ssh:/home/devops/.ssh
       - .ssh/sshd_config:/etc/ssh/ssh_config
 
     command: ["/bin/bash"]

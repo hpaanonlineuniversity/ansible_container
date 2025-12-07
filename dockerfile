@@ -11,17 +11,17 @@ RUN apt-get update && apt-get install -y \
     iputils-ping \
     && pip3 install ansible
 
-# Create student user
-RUN useradd -m -s /bin/bash student
+# Create devops user
+RUN useradd -m -s /bin/bash devops
 
 # Create workspace directory and SSH directory with proper permissions
-RUN mkdir -p /home/student/workspace && \
-    mkdir -p /home/student/.ssh && \
-    chown -R student:student /home/student && \
-    chmod 700 /home/student/.ssh
+RUN mkdir -p /home/devops/workspace && \
+    mkdir -p /home/devops/.ssh && \
+    chown -R devops:devops /home/devops && \
+    chmod 700 /home/devops/.ssh
 
-USER student
-WORKDIR /home/student/workspace
+USER devops
+WORKDIR /home/devops/workspace
 
 # Default command
 CMD ["/bin/bash"]
