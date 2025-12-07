@@ -7,3 +7,10 @@
   ansible.builtin.apt:
     upgrade: dist
     force_apt_get: yes
+
+- name: Create user account user01
+  ansible.builtin.user:
+    name: user01
+    state: present
+    create_home: yes
+    shell: /bin/bash
