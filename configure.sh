@@ -9,9 +9,6 @@ docker exec -it ansible_controller bash -c 'echo " Please Enter root password to
 
 docker exec -it ansible_controller ansible all -u student -k -m authorized_key -a "user=student key='{{ lookup('file', '/home/student/.ssh/ed25519.pub') }}'"
 
-# Update known_hosts for each host
-docker exec -it ansible_controller bash -c 'for host in svr01 svr02 svr03;  do ssh-keyscan -H $host >> ~/.ssh/known_hosts; done'
-
 docker exec -it ansible_controller ansible all -m ping
 
 docker compose down
