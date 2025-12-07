@@ -3,7 +3,7 @@
 
 docker compose up -d
 
-docker exec -it ansible_controller ansible-playbook -u student -k playbooks/main.yml -i ./inventory/inventory
+docker exec -it ansible_controller ansible-playbook playbooks/main.yml -i ./inventory/inventory
 
 docker compose down
 

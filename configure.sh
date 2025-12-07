@@ -5,7 +5,7 @@ docker compose up -d --build
 
 docker exec -it ansible_controller ansible all --list-hosts
 
-docker exec -it ansible_controller bash -c 'echo " Please Enter root password to copy authorized public key to managed hosts"'
+docker exec -it ansible_controller bash -c 'echo " Please Enter password to copy authorized public key to managed hosts"'
 
 docker exec -it ansible_controller ansible all -u student -k -m authorized_key -a "user=student key='{{ lookup('file', '/home/student/.ssh/ed25519.pub') }}'"
 
