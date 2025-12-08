@@ -10,5 +10,11 @@ svr02
 [load_balancers]
 svr03
 
+[window_servers]
+winsvr01
+
+[docker_hosts]
+docker_host_01
+
 
 
